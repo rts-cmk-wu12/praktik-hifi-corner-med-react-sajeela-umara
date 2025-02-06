@@ -5,6 +5,7 @@ import { LuMapPin } from "react-icons/lu";
 import { BsTelephone } from "react-icons/bs";
 import { BsEnvelope } from "react-icons/bs";
 import { PiEnvelopeSimpleLight } from "react-icons/pi";
+import '../style/header.scss'
 
 
 const Header = () => (

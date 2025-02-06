@@ -86,6 +86,7 @@ export default Home;*/
 
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
+import '../style/home.scss'
 
 const Home = () => {
     const [products, setProducts] = useState([]);
@@ -95,7 +96,7 @@ const Home = () => {
         fetch('http://localhost:3000/api/products')
             .then(res => res.json())
             .then(data => {
-                console.log(data); 
+                console.log(data);
                 setProducts(data);
             })
             .catch(err => console.log(err));
@@ -118,11 +119,14 @@ const Home = () => {
 
     return (
         <div className="App">
-            
-            <div>
-                <img src="./pictures/hifi-logo1.png" alt="Hi-Fi Logo" />
+         <Header />
+            <div className='start'>
+           
+
+
+
             </div>
-            
+
             <section className="showroom">
                 <div className="showroom_img">
                     <img src="./pictures/wavy_backgroung.jpg" alt="wavy" />
@@ -131,7 +135,7 @@ const Home = () => {
                     <p>OUR EDINBURGH SHOWROOM HAS NOW MOVED <br />TO STUNNING NEW PREMISES ON JOPPA ROAD</p>
                 </div>
             </section>
-            
+
             <div className="slider">
                 <div className="slides">
                     {products.length > 0 && (
@@ -144,7 +148,7 @@ const Home = () => {
                 <a className="prev" onClick={() => changeSlide(-1)}>❮</a>
                 <a className="next" onClick={() => changeSlide(1)}>❯</a>
             </div>
-            
+
             <section className="social-media">
                 <a href="https://www.facebook.com">
                     <img src="./pictures/hi_fi_social_logo.png" alt="Facebook" />
@@ -156,7 +160,7 @@ const Home = () => {
                     <img src="./pictures/hifi-frontpage_logo9.png" alt="Twitter" />
                 </a>
             </section>
-            
+
             <section className="info">
                 <article>
                     <h1 className="info_heading">HISTORY</h1>
