@@ -1,15 +1,17 @@
 import React from 'react';
-import './style/shop-frontpage.css'; 
-import './style/footer.css';
-import Frontpage from './shop-fontpage'; 
-import Footer from './Footer';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import MainBrands from './pages/MainBrands';
 
 function App() {
     return (
-        <>
-            <Frontpage /> 
-            <Footer/>
-        </>
+        <Router>
+           
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/main-brands" element={<MainBrands />} />
+            </Routes>
+        </Router>
     );
 }
 
