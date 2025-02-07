@@ -26,9 +26,10 @@
 }
 .textbox {
     position: absolute;
- 
+ color: white;
     bottom: 80px;
     left: 50px;
+    text-align: center;
     z-index: 10;
 
 }
@@ -44,6 +45,7 @@
 }
 .textbox2 a{
     position: relative;
+    
     top: 10px;
 }
 
