@@ -1,5 +1,6 @@
 import React from 'react';
-import './style/shop-frontpage.css';
+import '../style/shop-frontpage.css';
+
 
 const Frontpage = () => {
     React.useEffect(() => {
