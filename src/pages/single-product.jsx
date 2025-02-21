@@ -1,26 +1,36 @@
-import React from 'react';
-import '../style/single-product.css';
 
+import React from 'react';
+import { useLocation } from 'react-router-dom';
+import '../style/single-product.css';
+import Header2 from '../components/Header2';
+ 
 const SingleProduct = () => {
+    const { state } = useLocation();
+    const { product } = state;
+ 
     return (
+        <>
+        <Header2/>
         <main id="single-produkt-main">
             <div className="main__wrapper">
-                <p className="product-category-location" id="product-category-location"></p>
+                <p className="product-category-location" id="product-category-location">{product.category}</p>
                 <img src="images/new.png" alt="sale" className="product_category_commersial-img" />
                 <div className="single__produkt-left__container-all">
                     <div className="single__produkt-left">
-                        <div className="single__produkt-left__container-image" id="image-product"></div>
+                        <div className="single__produkt-left__container-image" id="image-product">
+                            <img src={product.image} alt={product.product_name} />
+                        </div>
                         <div className="single__produkt-left__container-images" id="container-images">
                             <p>MORE VIEWS</p>
                         </div>
                     </div>
                     <div className="single__produkt-right">
-                        <p className="single__produkt-right__product-name" id="product-name"></p>
+                        <p className="single__produkt-right__product-name" id="product-name">{product.product_name}</p>
                         <div className="single__produkt-right__product-price-wrapper">
-                            <p className="single__produkt-right__product-brand" id="product-brand"></p>
-                            <p className="single__produkt-right__product-price" id="product-price"></p>
+                            <p className="single__produkt-right__product-brand" id="product-brand">{product.brand}</p>
+                            <p className="single__produkt-right__product-price" id="product-price">£{product.price}</p>
                         </div>
-                        <p className="single__produkt-right__product-description" id="product-description"></p>
+                        <p className="single__produkt-right__product-description" id="product-description">{product.description}</p>
                         <div className="single__produkt-right__contaioner-buttons">
                             <button>ASK A QUESTION</button>
                             <button>PART EXCHANGE</button>
@@ -37,7 +47,7 @@ const SingleProduct = () => {
                                 <div className="single__produkt-right__contaioner-add_to_cart__or">
                                     <button className="single__produkt-right__contaioner-add_to_cart__button" id="add_to_cart__button">ADD TO CART</button>
                                     <p className="single__produkt-right__or-p">-OR-</p>
-                                    <a href="#" className="single__produkt-right__or-a" id="chech-out">
+                                    <a href="#" className="single__produkt-right__or-a" id="check-out">
                                         <img src="images/paypal.png.png" alt="paypal" />
                                         Check Out
                                     </a>
@@ -50,11 +60,11 @@ const SingleProduct = () => {
                             <tbody className="single__produkt-right__table-tbody">
                                 <tr>
                                     <th scope="row">Manufacturer</th>
-                                    <td id="table_td-manufacture"></td>
+                                    <td id="table_td-manufacture">{product.manufacturer}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Manufacturer link</th>
-                                    <td id="table_td-manufacture-link"></td>
+                                    <td id="table_td-manufacture-link"><a href={product.manufacturer_link}>Link</a></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">FREE WARRANTY</th>
@@ -136,7 +146,10 @@ const SingleProduct = () => {
                 </div>
             </div>
         </main>
+       </> 
     );
 };
-
+ 
 export default SingleProduct;
+ 
+ 
