@@ -1,12 +1,12 @@
 
 import React from 'react';
-import Header from '../components/Header';
+import Header3 from '../components/Header3';
 import '../style/brands.scss'
 
 const MainBrands = () => {
     return (
         <main className="main-brands">
-            <Header />
+            <Header3 />
             <div className="grid-container-brands">
                 <section className="top-brands">
                     <h1 className="top-brands-header">TOP BRANDS</h1>

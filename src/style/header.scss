@@ -9,13 +9,16 @@ img {
 
 /*-------------Icons style--------*/
 
+
+
 .headeritems1__list {
     color: white;
     display: flex;
     justify-content: flex-end;
-    gap: 30px;
     list-style: none;
     background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    gap: 1.5em;
     
     .header__item--last1 {
         display: flex;
@@ -30,6 +33,52 @@ img {
         gap: 0.5em;
     }
 }
+
+/*....header2......*/
+
+.headeritems2{
+    background-color: black;
+}
+
+.headeritems1__form {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    
+    height: 25px;
+    width: 300px;
+    margin-top: 0.5em;
+    padding-inline: 0.2rem;
+}
+.header__item2 {
+    display: flex;
+    color: white;
+    align-items: center;
+    
+    
+}
+
+.headeritems__input {
+    border: none;
+    background: none;
+    padding-block: 0.15rem;
+    width: 100%;
+}
+
+.headeritems__input::placeholder {
+    color: gray;
+}
+
+.headeritems1_logo {
+    width: 50px;
+    margin-right: 29em;
+}
+
+
+
+
 
 /*------------------menu style----------*/
 
@@ -62,3 +111,13 @@ img {
         color: #9b8d67;
     }
 }
+
+.menu__link {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit; /* Adjust this as needed */
+  
+    &:hover {
+      text-decoration: underline; /* or any hover effect you prefer */
+    }
+  }
