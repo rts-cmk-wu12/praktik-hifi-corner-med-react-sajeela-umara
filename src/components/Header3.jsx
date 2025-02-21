@@ -40,8 +40,8 @@ const Header3 = () => {
                 
         <li className="menu__item"><a className="menu__link" href="#">BLOG</a></li>
         <li className="menu__item"><a className="menu__link" href="#">EVENTS</a></li>
-        <li className="menu__item"><a className="menu__link" href="shop-frontpage.html">SHOP</a></li>
-        <li className="menu__item"><a className="menu__link" href="#">CONTACT US</a></li>
+        <li className="menu__item"><span className="menu__link" onClick={() => navigate('/shop-frontpage')}>SHOP</span></li>
+        <li className="menu__item"><span className="menu__link" onClick={() => navigate('/shoppingCart')}>CONTACT US</span></li>
 
         </ul>
     </nav>
