@@ -88,6 +88,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import '../style/home.scss'
 
+
 const Home = () => {
     const [products, setProducts] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
