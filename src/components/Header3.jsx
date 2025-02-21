@@ -1,25 +1,32 @@
 
+
 import React from 'react';
 import { Link, useNavigate  } from 'react-router-dom';
 import { LuMapPin } from "react-icons/lu";
 import { BsTelephone } from "react-icons/bs";
 import { BsEnvelope } from "react-icons/bs";
-import { PiEnvelopeSimpleLight } from "react-icons/pi";
+
 import '../style/header.scss'
 
-
-const Header = () => {
+const Header3 = () => {
     const navigate = useNavigate();
+    
 
     return (
     <header>
-        <div className="headeritems">
-        <ul className="headeritems1__list">
-        <li className="header__item1 header__item--last"><LuMapPin  size={30}/></li>
-        <li className="header__item1 header__item--last"><BsTelephone  size={30}/></li>
-        <li className="header__item1 header__item--last"><BsEnvelope size={30} /></li>
-        <li className="header__item1 header__item--last1"> <PiEnvelopeSimpleLight />Subscribe</li>
+        <div className="headeritems2">
+        
+        <ul className="headeritems1__list" >
+        
+        
+       
+
+        <li className="header__item2 header__item--last"><LuMapPin  size={30}/></li>
+        <li className="header__item2 header__item--last"><BsTelephone  size={30}/></li>
+        <li className="header__item2 header__item--last"><BsEnvelope size={30} /></li>
+        
         </ul>
+        <hr className="header_line"></hr>
     </div>
 
     <nav>
@@ -33,7 +40,7 @@ const Header = () => {
                 
         <li className="menu__item"><a className="menu__link" href="#">BLOG</a></li>
         <li className="menu__item"><a className="menu__link" href="#">EVENTS</a></li>
-        <li className="menu__item"><span className="menu__link" onClick={() => navigate('/shop-frontpage')}>SHOP</span></li>
+        <li className="menu__item"><a className="menu__link" href="shop-frontpage.html">SHOP</a></li>
         <li className="menu__item"><a className="menu__link" href="#">CONTACT US</a></li>
 
         </ul>
@@ -42,4 +49,5 @@ const Header = () => {
 );
 };
 
-export default Header;
+
+export default Header3;
